@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { Download, ArrowLeft } from "lucide-react"
+import { Download, ArrowLeft, Mail, Phone, MapPin, Linkedin, Github } from "lucide-react"
 import Link from "next/link"
 
 export default function CVPage() {
@@ -27,219 +27,208 @@ export default function CVPage() {
 
       {/* CV Content */}
       <div className="min-h-screen bg-white text-gray-900 print:bg-white">
-        <div className="max-w-[850px] mx-auto px-8 py-16 print:py-8 print:px-12">
+        <div className="max-w-[850px] mx-auto px-8 py-16 print:py-6 print:px-10">
+          
           {/* Header */}
-          <header className="text-center border-b-2 border-gray-800 pb-6 mb-6">
-            <h1 className="text-4xl font-bold text-gray-900 mb-2">Saket Singh</h1>
-            <p className="text-xl text-gray-700 font-medium mb-4">Embedded Engineer</p>
-            <div className="flex flex-wrap justify-center gap-x-4 gap-y-1 text-sm text-gray-600">
-              <span>Mumbai, India</span>
-              <span>|</span>
-              <span>+91 9334314811</span>
-              <span>|</span>
-              <a href="mailto:saketsingh477@gmail.com" className="text-blue-700 hover:underline print:text-gray-700">
-                saketsingh477@gmail.com
-              </a>
+          <header className="mb-6">
+            <h1 className="text-3xl font-bold text-gray-900 tracking-tight">SAKET SINGH</h1>
+            <p className="text-lg text-gray-700 font-medium mt-1">Embedded Systems Engineer</p>
+            
+            <div className="flex flex-wrap items-center gap-x-5 gap-y-2 mt-3 text-sm text-gray-600">
+              <div className="flex items-center gap-1.5">
+                <MapPin className="h-3.5 w-3.5" />
+                <span>Mumbai, India</span>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <Phone className="h-3.5 w-3.5" />
+                <span>+91 9334314811</span>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <Mail className="h-3.5 w-3.5" />
+                <a href="mailto:saketsingh477@gmail.com" className="hover:text-gray-900 print:text-gray-600">
+                  saketsingh477@gmail.com
+                </a>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <Linkedin className="h-3.5 w-3.5" />
+                <a href="https://linkedin.com/in/saketsingh477" className="hover:text-gray-900 print:text-gray-600">
+                  linkedin.com/in/saketsingh477
+                </a>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <Github className="h-3.5 w-3.5" />
+                <a href="https://github.com/saketsingh477" className="hover:text-gray-900 print:text-gray-600">
+                  github.com/saketsingh477
+                </a>
+              </div>
             </div>
-            <div className="flex flex-wrap justify-center gap-x-4 gap-y-1 text-sm text-gray-600 mt-2">
-              <a href="https://linkedin.com/in/saketsingh477" className="text-blue-700 hover:underline print:text-gray-700">
-                linkedin.com/in/saketsingh477
-              </a>
-              <span>|</span>
-              <a href="https://github.com/saketsingh477" className="text-blue-700 hover:underline print:text-gray-700">
-                github.com/saketsingh477
-              </a>
-            </div>
+            
+            <div className="h-px bg-gray-300 mt-4" />
           </header>
 
           {/* Professional Summary */}
-          <section className="mb-6">
-            <h2 className="text-lg font-bold text-gray-900 uppercase tracking-wide border-b border-gray-300 pb-1 mb-3">
+          <section className="mb-5">
+            <h2 className="text-sm font-bold text-gray-900 uppercase tracking-wider mb-2">
               Professional Summary
             </h2>
             <p className="text-sm text-gray-700 leading-relaxed">
-              Results-driven Embedded Engineer with 3+ years of experience designing and developing embedded systems for industrial, IoT, and automotive applications. Proficient in bare-metal and RTOS-based firmware development across a range of microcontrollers and communication protocols. Adept at bridging hardware and software to deliver reliable, real-world solutions.
+              Results-driven Embedded Systems Engineer with 3+ years of hands-on experience designing and developing embedded systems for industrial IoT, automotive, and monitoring applications. Proficient in bare-metal and RTOS-based firmware development across STM32, ESP32, and various microcontroller platforms. Strong expertise in communication protocols (UART, SPI, I2C, Modbus, MQTT, BLE) and end-to-end hardware-software integration. Passionate about building reliable, real-world embedded solutions.
             </p>
           </section>
 
           {/* Work Experience */}
-          <section className="mb-6">
-            <h2 className="text-lg font-bold text-gray-900 uppercase tracking-wide border-b border-gray-300 pb-1 mb-3">
-              Work Experience
+          <section className="mb-5">
+            <h2 className="text-sm font-bold text-gray-900 uppercase tracking-wider mb-3">
+              Professional Experience
             </h2>
 
             <div className="mb-4">
-              <div className="flex justify-between items-start mb-1">
-                <div>
-                  <h3 className="font-bold text-gray-900">FEAST Software Private Limited</h3>
-                  <p className="text-sm text-gray-600 italic">Senior Electronics Engineer</p>
-                </div>
-                <p className="text-sm text-gray-600 text-right">Sep 2025 – Present<br />Mumbai, India</p>
+              <div className="flex justify-between items-baseline mb-1">
+                <h3 className="font-bold text-gray-900">Senior Electronics Engineer</h3>
+                <span className="text-sm text-gray-600">Sep 2025 – Present</span>
               </div>
-              <ul className="text-sm text-gray-700 list-disc list-outside ml-4 space-y-1">
-                <li>Worked on simulation and design automation projects for automotive, aerospace, and manufacturing industries.</li>
-                <li>Contributed to product performance optimization using embedded and electronics engineering expertise.</li>
-                <li>Collaborated with cross-functional teams to develop engineering solutions for client-specific requirements.</li>
+              <p className="text-sm text-gray-600 mb-1.5">FEAST Software Private Limited, Mumbai</p>
+              <ul className="text-sm text-gray-700 list-disc list-outside ml-4 space-y-0.5">
+                <li>Lead simulation and design automation projects for automotive, aerospace, and manufacturing clients</li>
+                <li>Optimize product performance leveraging embedded systems and electronics engineering expertise</li>
+                <li>Collaborate with cross-functional teams to deliver client-specific engineering solutions</li>
               </ul>
             </div>
 
-            <div className="mb-4">
-              <div className="flex justify-between items-start mb-1">
-                <div>
-                  <h3 className="font-bold text-gray-900">Aniruddha Telemetry System Pvt Ltd.</h3>
-                  <p className="text-sm text-gray-600 italic">Embedded Engineer</p>
-                </div>
-                <p className="text-sm text-gray-600 text-right">July 2022 – Aug 2025<br />Mumbai, India</p>
+            <div>
+              <div className="flex justify-between items-baseline mb-1">
+                <h3 className="font-bold text-gray-900">Embedded Engineer</h3>
+                <span className="text-sm text-gray-600">Jul 2022 – Aug 2025</span>
               </div>
-              <ul className="text-sm text-gray-700 list-disc list-outside ml-4 space-y-1">
-                <li>Designed and developed firmware for embedded systems using STM32, ESP32, Arduino, and Raspberry Pi platforms.</li>
-                <li>Implemented communication protocols including UART, SPI, I2C, RS232, RS485, Modbus, BLE, Wi-Fi, MQTT, and Zigbee.</li>
-                <li>Developed IoT-based monitoring and automation systems deployed in mining and transport industries.</li>
-                <li>Integrated RFID, GPS, GSM, and sensor modules into end-to-end embedded solutions.</li>
-                <li>Debugged and tested hardware-software interfaces using tools like Putty, Docklight, and Proteus.</li>
+              <p className="text-sm text-gray-600 mb-1.5">Aniruddha Telemetry System Pvt Ltd., Mumbai</p>
+              <ul className="text-sm text-gray-700 list-disc list-outside ml-4 space-y-0.5">
+                <li>Designed firmware for STM32, ESP32, Arduino, and Raspberry Pi platforms for industrial applications</li>
+                <li>Implemented UART, SPI, I2C, RS232/RS485, Modbus, BLE, Wi-Fi, MQTT, and Zigbee protocols</li>
+                <li>Developed IoT monitoring systems deployed across mining and transportation industries</li>
+                <li>Integrated RFID, GPS, GSM modules into complete embedded solutions</li>
+                <li>Performed hardware-software debugging using Putty, Docklight, and Proteus</li>
               </ul>
             </div>
           </section>
 
-          {/* Projects */}
-          <section className="mb-6">
-            <h2 className="text-lg font-bold text-gray-900 uppercase tracking-wide border-b border-gray-300 pb-1 mb-3">
-              Projects
+          {/* Key Projects */}
+          <section className="mb-5">
+            <h2 className="text-sm font-bold text-gray-900 uppercase tracking-wider mb-3">
+              Key Projects
             </h2>
 
-            <div className="space-y-3">
-              <div>
-                <h3 className="font-bold text-gray-900 text-sm">STM32 GPIO Driver – Bare-Metal using CMSIS</h3>
-                <p className="text-xs text-gray-700">Developed a reusable GPIO peripheral driver using register-level programming (no HAL/CubeMX). Designed modular and scalable driver architecture with configurable mode, speed, output type, and pull-up/down settings.</p>
-                <p className="text-xs text-gray-500 italic">Technologies: STM32, CMSIS, Bare-Metal, Embedded C</p>
-              </div>
-
-              <div>
-                <h3 className="font-bold text-gray-900 text-sm">EV Cruise Control – FreeRTOS Based</h3>
-                <p className="text-xs text-gray-700">Built a cruise control system for an electric vehicle using FreeRTOS task scheduling and feedback-based speed regulation. Implemented inter-task communication using queues.</p>
-                <p className="text-xs text-gray-500 italic">Technologies: FreeRTOS, Embedded C++, STM32</p>
-              </div>
-
-              <div>
-                <h3 className="font-bold text-gray-900 text-sm">ESP8266 AWS IoT – Environmental Monitoring</h3>
-                <p className="text-xs text-gray-700">Connected ESP8266 with DHT sensor to collect temperature and humidity data and push it to AWS IoT Cloud via MQTT.</p>
-                <p className="text-xs text-gray-500 italic">Technologies: ESP8266, DHT Sensor, AWS IoT, MQTT, C</p>
-              </div>
-
-              <div>
-                <h3 className="font-bold text-gray-900 text-sm">CEAT NSD – Tyre Monitoring System with BLE & OLED</h3>
-                <p className="text-xs text-gray-700">Designed a real-time tyre monitoring system measuring Non-Skid Depth and tyre pressure. Transmitted live sensor data to Android app via BLE.</p>
-                <p className="text-xs text-gray-500 italic">Technologies: XIAO nRF52840 Sense, TLV493D, XGZP6897D, BLE, Arduino IDE</p>
-              </div>
-
-              <div>
-                <h3 className="font-bold text-gray-900 text-sm">DigiMines – Smart Mine Monitoring System</h3>
-                <p className="text-xs text-gray-700">Developed smart system for mining operations monitoring, tracking trips, material quantity, and shifter activities. Integrated GPS tracking and Zigbee communication with MQTT.</p>
-                <p className="text-xs text-gray-500 italic">Technologies: EC200U Quectel, GPS, Zigbee, MQTT, Raspberry Pi Pico, Python, IoT</p>
-              </div>
-
-              <div>
-                <h3 className="font-bold text-gray-900 text-sm">DigiFlex – Automated Transport Management System</h3>
-                <p className="text-xs text-gray-700">Developed complete transport management automation system covering weight measurement, SAP data entry, and vehicle tracking.</p>
-                <p className="text-xs text-gray-500 italic">Technologies: ATmega2560, RFID, FACC Sensors, GSM, LAN, Embedded C</p>
-              </div>
-            </div>
-          </section>
-
-          {/* Education */}
-          <section className="mb-6">
-            <h2 className="text-lg font-bold text-gray-900 uppercase tracking-wide border-b border-gray-300 pb-1 mb-3">
-              Education
-            </h2>
-
-            <div className="space-y-2">
-              <div className="flex justify-between items-start">
-                <div>
-                  <h3 className="font-bold text-gray-900 text-sm">Bachelor of Engineering – Electrical & Electronics Engineering</h3>
-                  <p className="text-xs text-gray-600">Shri Ram College of Technology, Bhopal</p>
+            <div className="grid grid-cols-1 gap-2.5">
+              <div className="border-l-2 border-gray-300 pl-3">
+                <div className="flex justify-between items-baseline">
+                  <h3 className="font-semibold text-gray-900 text-sm">STM32 GPIO Driver – Bare-Metal CMSIS</h3>
+                  <span className="text-xs text-gray-500">STM32F4, CMSIS, Embedded C</span>
                 </div>
-                <div className="text-right">
-                  <p className="text-xs text-gray-600">2022 – 2025</p>
-                  <p className="text-xs text-gray-700 font-medium">CGPA: 8.28</p>
-                </div>
+                <p className="text-xs text-gray-600 mt-0.5">Developed reusable GPIO peripheral driver using register-level programming without HAL. Modular architecture with configurable mode, speed, output type, and pull settings.</p>
               </div>
 
-              <div className="flex justify-between items-start">
-                <div>
-                  <h3 className="font-bold text-gray-900 text-sm">Diploma – Electrical and Electronics Engineering</h3>
-                  <p className="text-xs text-gray-600">Govt. Polytechnic Jagannathpur, Jamshedpur</p>
+              <div className="border-l-2 border-gray-300 pl-3">
+                <div className="flex justify-between items-baseline">
+                  <h3 className="font-semibold text-gray-900 text-sm">EV Cruise Control System</h3>
+                  <span className="text-xs text-gray-500">FreeRTOS, STM32, C++</span>
                 </div>
-                <div className="text-right">
-                  <p className="text-xs text-gray-600">2019 – 2022</p>
-                  <p className="text-xs text-gray-700 font-medium">Percentage: 86%</p>
+                <p className="text-xs text-gray-600 mt-0.5">Built cruise control for EV using FreeRTOS task scheduling with feedback-based speed regulation and inter-task queue communication.</p>
+              </div>
+
+              <div className="border-l-2 border-gray-300 pl-3">
+                <div className="flex justify-between items-baseline">
+                  <h3 className="font-semibold text-gray-900 text-sm">CEAT NSD – Tyre Monitoring System</h3>
+                  <span className="text-xs text-gray-500">nRF52840, BLE, Arduino</span>
                 </div>
+                <p className="text-xs text-gray-600 mt-0.5">Designed real-time tyre monitoring measuring Non-Skid Depth and pressure with BLE data transmission to Android app.</p>
+              </div>
+
+              <div className="border-l-2 border-gray-300 pl-3">
+                <div className="flex justify-between items-baseline">
+                  <h3 className="font-semibold text-gray-900 text-sm">DigiMines – Smart Mine Monitoring</h3>
+                  <span className="text-xs text-gray-500">Quectel, GPS, Zigbee, MQTT, RPi Pico</span>
+                </div>
+                <p className="text-xs text-gray-600 mt-0.5">Developed smart mining operations monitoring system for trip tracking, material quantity, and shifter activities with GPS and Zigbee integration.</p>
+              </div>
+
+              <div className="border-l-2 border-gray-300 pl-3">
+                <div className="flex justify-between items-baseline">
+                  <h3 className="font-semibold text-gray-900 text-sm">DigiFlex – Transport Management System</h3>
+                  <span className="text-xs text-gray-500">ATmega2560, RFID, GSM, Embedded C</span>
+                </div>
+                <p className="text-xs text-gray-600 mt-0.5">Built complete transport automation covering weight measurement, SAP data entry, and vehicle tracking.</p>
               </div>
             </div>
           </section>
 
           {/* Skills */}
-          <section className="mb-6">
-            <h2 className="text-lg font-bold text-gray-900 uppercase tracking-wide border-b border-gray-300 pb-1 mb-3">
-              Skills
+          <section className="mb-5">
+            <h2 className="text-sm font-bold text-gray-900 uppercase tracking-wider mb-2">
+              Technical Skills
             </h2>
 
-            <div className="grid grid-cols-1 gap-2 text-sm">
-              <div className="flex">
-                <span className="font-bold text-gray-900 w-32 shrink-0">Programming:</span>
-                <span className="text-gray-700">C, Embedded C, C++, Python, SQL, Bare Metal</span>
+            <div className="grid grid-cols-2 gap-x-8 gap-y-1.5 text-sm">
+              <div>
+                <span className="font-semibold text-gray-800">Languages:</span>
+                <span className="text-gray-600 ml-1">C, Embedded C, C++, Python, SQL</span>
               </div>
-              <div className="flex">
-                <span className="font-bold text-gray-900 w-32 shrink-0">Software & Tools:</span>
-                <span className="text-gray-700">Keil, STM32CubeIDE, Eagle, KiCad, Arduino IDE, VS Code, Proteus, Putty, Docklight, GitLab</span>
+              <div>
+                <span className="font-semibold text-gray-800">Protocols:</span>
+                <span className="text-gray-600 ml-1">UART, SPI, I2C, RS232/485, Modbus, BLE, MQTT</span>
               </div>
-              <div className="flex">
-                <span className="font-bold text-gray-900 w-32 shrink-0">Protocols:</span>
-                <span className="text-gray-700">UART, SPI, I2C, RS232, RS485, Ethernet, Modbus, BLE, Wi-Fi, MQTT, Zigbee</span>
+              <div>
+                <span className="font-semibold text-gray-800">Platforms:</span>
+                <span className="text-gray-600 ml-1">STM32, ESP32, Arduino, RPi Pico, nRF52840</span>
               </div>
-              <div className="flex">
-                <span className="font-bold text-gray-900 w-32 shrink-0">Boards & MCUs:</span>
-                <span className="text-gray-700">ESP32, Arduino, XIAO nRF52840, Raspberry Pi Pico W, PIC16F877A, STM32F103C8T6</span>
+              <div>
+                <span className="font-semibold text-gray-800">Tools:</span>
+                <span className="text-gray-600 ml-1">STM32CubeIDE, Keil, KiCad, Eagle, Proteus, Git</span>
+              </div>
+            </div>
+          </section>
+
+          {/* Education */}
+          <section className="mb-5">
+            <h2 className="text-sm font-bold text-gray-900 uppercase tracking-wider mb-2">
+              Education
+            </h2>
+
+            <div className="space-y-2">
+              <div className="flex justify-between items-baseline">
+                <div>
+                  <h3 className="font-semibold text-gray-900 text-sm">B.E. Electrical & Electronics Engineering</h3>
+                  <p className="text-xs text-gray-600">Shri Ram College of Technology, Bhopal</p>
+                </div>
+                <div className="text-right">
+                  <span className="text-sm text-gray-600">2022 – 2025</span>
+                  <p className="text-xs text-gray-700 font-medium">CGPA: 8.28</p>
+                </div>
+              </div>
+
+              <div className="flex justify-between items-baseline">
+                <div>
+                  <h3 className="font-semibold text-gray-900 text-sm">Diploma in Electrical & Electronics Engineering</h3>
+                  <p className="text-xs text-gray-600">Govt. Polytechnic Jagannathpur, Jamshedpur</p>
+                </div>
+                <div className="text-right">
+                  <span className="text-sm text-gray-600">2019 – 2022</span>
+                  <p className="text-xs text-gray-700 font-medium">86%</p>
+                </div>
               </div>
             </div>
           </section>
 
           {/* Certifications */}
-          <section className="mb-6">
-            <h2 className="text-lg font-bold text-gray-900 uppercase tracking-wide border-b border-gray-300 pb-1 mb-3">
-              Coursework & Certifications
-            </h2>
-
-            <div className="grid grid-cols-2 gap-4 text-sm">
-              <div>
-                <h3 className="font-bold text-gray-900 text-xs mb-1">Academic Projects:</h3>
-                <ul className="text-xs text-gray-700 list-disc list-inside">
-                  <li>RFID Based Attendance System</li>
-                  <li>Wireless Voltage Detector</li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="font-bold text-gray-900 text-xs mb-1">Online Certifications:</h3>
-                <ul className="text-xs text-gray-700 list-disc list-inside">
-                  <li>Introduction to ARM Cortex-M4</li>
-                  <li>IoT with ESP32 Board</li>
-                  <li>PCB Design with Eagle</li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="mt-3">
-              <h3 className="font-bold text-gray-900 text-xs mb-1">Currently Learning:</h3>
-              <p className="text-xs text-gray-700">STM32 Bare-Metal Driver Development (UART, SPI, I2C using CMSIS) • FreeRTOS • PCB Design with KiCad</p>
-            </div>
-          </section>
-
-          {/* References */}
           <section>
-            <h2 className="text-lg font-bold text-gray-900 uppercase tracking-wide border-b border-gray-300 pb-1 mb-3">
-              References
+            <h2 className="text-sm font-bold text-gray-900 uppercase tracking-wider mb-2">
+              Certifications & Continuous Learning
             </h2>
-            <p className="text-sm text-gray-700">Available upon request.</p>
+
+            <div className="text-sm text-gray-700">
+              <p><span className="font-semibold text-gray-800">Completed:</span> Introduction to ARM Cortex-M4 | IoT with ESP32 | PCB Design with Eagle</p>
+              <p className="mt-1"><span className="font-semibold text-gray-800">Currently Learning:</span> STM32 Bare-Metal Driver Development (UART, SPI, I2C via CMSIS) | FreeRTOS | KiCad PCB Design</p>
+            </div>
           </section>
+
         </div>
       </div>
 
@@ -248,7 +237,7 @@ export default function CVPage() {
         @media print {
           @page {
             size: A4;
-            margin: 0.5in;
+            margin: 0.4in;
           }
           body {
             -webkit-print-color-adjust: exact;

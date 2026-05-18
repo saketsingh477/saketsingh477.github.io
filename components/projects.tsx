@@ -74,9 +74,9 @@ export function Projects() {
                       <div className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center">
                         <span className="font-mono text-primary text-sm">{`</>`}</span>
                       </div>
-                      {('status' in project) && project.status && (
-                         <span className="text-xs font-mono text-primary bg-primary/10 px-2 py-1 rounded">
-                          {(project as any).status}
+                      {('status' in project) && typeof (project as any).status === 'string' && (
+                        <span className="text-xs font-mono text-primary bg-primary/10 px-2 py-1 rounded">
+                          {(project as any).status as string}
                         </span>
                       )}
                     </div>

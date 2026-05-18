@@ -2,7 +2,8 @@
 
 import { motion, useInView } from "framer-motion"
 import { useRef } from "react"
-import { Bot, Cog, Zap, Box, Terminal, Microchip } from "lucide-react"
+import { Bot, Cog, Zap, Box, Terminal, Microchip, Quote, Mail, ArrowDown } from "lucide-react"
+import { Button } from "@/components/ui/button"
 
 const subjects = [
   {
@@ -41,6 +42,10 @@ export function Mentorship() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
+  const scrollToSubjects = () => {
+    document.getElementById("subject-cards")?.scrollIntoView({ behavior: "smooth" })
+  }
+
   return (
     <section id="mentorship" className="py-20 px-6 bg-secondary/30">
       <div className="max-w-6xl mx-auto">
@@ -55,6 +60,21 @@ export function Mentorship() {
             Mentorship
             <span className="h-px bg-border flex-1 max-w-xs" />
           </h2>
+
+          {/* Title and Subtitle */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="mt-8 text-center"
+          >
+            <h3 className="text-xl md:text-2xl font-semibold text-foreground">
+              Robotics Mentor at <span className="text-primary">The Innovation Story</span>
+            </h3>
+            <p className="text-muted-foreground mt-2 text-lg">
+              Helping students build real things — from their first LED blink to autonomous robots
+            </p>
+          </motion.div>
 
           <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Intro Text */}
@@ -73,7 +93,7 @@ export function Mentorship() {
             </div>
 
             {/* Subject Cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div id="subject-cards" className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {subjects.map((subject, index) => (
                 <motion.div
                   key={subject.title}
@@ -96,16 +116,51 @@ export function Mentorship() {
             </div>
           </div>
 
-          {/* Note */}
+          {/* Testimonial Quote */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            className="mt-12 p-6 rounded-xl bg-card border border-border relative"
+          >
+            <Quote className="absolute top-4 left-4 h-8 w-8 text-primary/20" />
+            <blockquote className="text-center px-8">
+              <p className="text-muted-foreground italic text-lg leading-relaxed">
+                &ldquo;I believe the fastest way to learn embedded systems is to break something, debug it, and understand why it broke. That&apos;s the approach I bring to every mentorship session.&rdquo;
+              </p>
+              <footer className="mt-4 text-sm text-foreground font-medium">
+                — Saket Singh, Robotics Mentor, The Innovation Story
+              </footer>
+            </blockquote>
+          </motion.div>
+
+          {/* CTA Buttons */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.5, delay: 0.6 }}
+            className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"
+          >
+            <Button asChild size="lg" className="gap-2">
+              <a href="mailto:saketsingh477@gmail.com?subject=Mentorship Enquiry">
+                <Mail className="h-4 w-4" />
+                Book a mentorship session
+              </a>
+            </Button>
+            <Button variant="outline" size="lg" className="gap-2" onClick={scrollToSubjects}>
+              <ArrowDown className="h-4 w-4" />
+              View mentorship subjects
+            </Button>
+          </motion.div>
+
+          {/* Availability Note */}
           <motion.p
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : {}}
-            transition={{ duration: 0.5, delay: 0.6 }}
-            className="mt-10 text-center text-muted-foreground text-sm border-t border-border pt-8"
+            transition={{ duration: 0.5, delay: 0.7 }}
+            className="mt-8 text-center text-muted-foreground text-sm"
           >
-            Currently mentoring at{" "}
-            <span className="text-primary">The Innovation Story</span> — open to workshops,
-            college sessions, and one-on-one guidance.
+            <span className="font-medium text-foreground">Available for:</span> One-on-one sessions · College workshops · School robotics clubs · Weekend bootcamps
           </motion.p>
         </motion.div>
       </div>

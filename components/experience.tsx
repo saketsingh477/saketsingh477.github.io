@@ -5,16 +5,16 @@ import { useRef } from "react"
 
 const experiences = [
   {
-    company: "Aniruddha Telemetry",
+    company: "FEAST Software",
     role: "Firmware Engineer",
     period: "Present",
-    description: "Developing embedded firmware solutions for telemetry and monitoring systems. Working with STM32 microcontrollers, FreeRTOS, and various communication protocols.",
+    description: "Developing embedded firmware solutions for software and telemetry systems. Working with STM32 microcontrollers, FreeRTOS, and various communication protocols.",
   },
   {
-    company: "FEAST",
+    company: "Aniruddha Telemetry System",
     role: "Embedded Engineer",
     period: "Previous",
-    description: "Designed and implemented embedded systems for agricultural and industrial applications. Worked on sensor integration and real-time data processing.",
+    description: "Designed and implemented embedded systems for telemetry and monitoring applications. Worked on sensor integration and real-time data processing.",
   },
   {
     company: "DigiMines / DigiFlex",

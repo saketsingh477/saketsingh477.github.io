@@ -2,7 +2,7 @@
 
 import { motion, useInView } from "framer-motion"
 import { useRef, useState } from "react"
-import { Github, Linkedin, Mail, MapPin, Send } from "lucide-react"
+import { Github, Linkedin, Mail, MapPin, Phone, Send } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -21,7 +21,7 @@ export function Contact() {
     // Create mailto link with form data
     const subject = encodeURIComponent(`Portfolio Contact from ${formData.name}`)
     const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`)
-    window.location.href = `mailto:contact@saketsingh.dev?subject=${subject}&body=${body}`
+    window.location.href = `mailto:saketsingh477@gmail.com?subject=${subject}&body=${body}`
   }
 
   return (
@@ -50,13 +50,23 @@ export function Contact() {
 
               <div className="space-y-4">
                 <a
-                  href="mailto:contact@saketsingh.dev"
+                  href="mailto:saketsingh477@gmail.com"
                   className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors group"
                 >
                   <div className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center group-hover:bg-primary/10 transition-colors">
                     <Mail className="h-5 w-5" />
                   </div>
-                  <span className="text-sm">contact@saketsingh.dev</span>
+                  <span className="text-sm">saketsingh477@gmail.com</span>
+                </a>
+
+                <a
+                  href="tel:+919334314811"
+                  className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors group"
+                >
+                  <div className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center group-hover:bg-primary/10 transition-colors">
+                    <Phone className="h-5 w-5" />
+                  </div>
+                  <span className="text-sm">+91 9334314811</span>
                 </a>
 
                 <a

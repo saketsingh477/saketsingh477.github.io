@@ -10,8 +10,8 @@ const projects = [
     title: "STM32 GPIO Bare-Metal Driver",
     tags: ["STM32F4", "CMSIS", "Bare-Metal", "ARM Cortex-M4", "C", "Embedded C"],
     description: "Custom GPIO peripheral driver for STM32F4 written entirely at the CMSIS register level — no HAL abstraction. Implements input/output mode configuration, alternate function mapping, output speed and pull-up/pull-down control, and external interrupt (EXTI) handling. Designed to demonstrate deep understanding of ARM Cortex-M4 peripheral architecture.",
-    github: "https://github.com/saketsingh477/STM32_GPIO_Driver",
-    readme: "https://github.com/saketsingh477/STM32_GPIO_Driver#readme",
+    github: "https://github.com/saketsingh477/CMSIS_GPIO-DRIVER",
+    readme: "https://github.com/saketsingh477/CMSIS_GPIO-DRIVER/blob/master/README.md",
   },
   {
     title: "EV Cruise Control System",

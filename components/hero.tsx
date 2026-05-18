@@ -111,11 +111,7 @@ export function Hero() {
               </Button>
 
               <Button asChild variant="outline" size="lg" className="group">
-                <a
-                  href="#"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <a href="/cv">
                   <Download className="mr-2 h-4 w-4" />
                   Download CV
                 </a>

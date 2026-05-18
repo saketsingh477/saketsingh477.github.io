@@ -2,16 +2,16 @@
 
 import { motion, useInView } from "framer-motion"
 import { useRef } from "react"
-import { Github, ExternalLink } from "lucide-react"
+import { Github, ExternalLink, FileText } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const projects = [
   {
-    title: "STM32 GPIO Driver",
-    status: "In Progress",
-    tags: ["STM32", "CMSIS", "Bare-Metal", "C"],
-    description: "Custom GPIO peripheral driver written at register level without HAL. Covers input/output modes, alternate function config, and interrupt handling on STM32F4.",
-    github: "https://github.com/saketsingh477",
+    title: "STM32 GPIO Bare-Metal Driver",
+    tags: ["STM32F4", "CMSIS", "Bare-Metal", "ARM Cortex-M4", "C", "Embedded C"],
+    description: "Custom GPIO peripheral driver for STM32F4 written entirely at the CMSIS register level — no HAL abstraction. Implements input/output mode configuration, alternate function mapping, output speed and pull-up/pull-down control, and external interrupt (EXTI) handling. Designed to demonstrate deep understanding of ARM Cortex-M4 peripheral architecture.",
+    github: "https://github.com/saketsingh477/STM32_GPIO_Driver",
+    readme: "https://github.com/saketsingh477/STM32_GPIO_Driver#readme",
   },
   {
     title: "EV Cruise Control System",
@@ -90,6 +90,18 @@ export function Projects() {
                             aria-label={`View ${project.title} on GitHub`}
                           >
                             <Github className="h-4 w-4" />
+                          </a>
+                        </Button>
+                      )}
+                      {project.readme && (
+                        <Button asChild variant="ghost" size="icon" className="h-8 w-8">
+                          <a
+                            href={project.readme}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={`View ${project.title} README`}
+                          >
+                            <FileText className="h-4 w-4" />
                           </a>
                         </Button>
                       )}
